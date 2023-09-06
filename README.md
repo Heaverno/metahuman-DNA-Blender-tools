@@ -29,7 +29,8 @@ TBH, I have no idea about correctly licensing.
 
 - Anyway, it still can be good if you'd like to refine expression with Blender. 
 # Usage
-Download [DNACalib](https://github.com/EpicGames/MetaHuman-DNA-Calibration) release
+- Download [DNACalib](https://github.com/EpicGames/MetaHuman-DNA-Calibration) release
+- Grab all files but mlls under lib/maya2023/windows/ and drag them to the folder of this addon
 
 ```
                                                         qwq
