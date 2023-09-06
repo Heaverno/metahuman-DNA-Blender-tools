@@ -1,10 +1,14 @@
 # metahuman-DNA-Blender-tools
 Intention is to make reading, editing and writing dna files of metahuman possible in Blender.
+
+Please read me thoroughly.
+
 # License
 Since this is a Blender addon, it has to go with with [GPL licence](LICENSE). 
 Mean while the usage of assets and resources related to Epic's metahuman must follow [Epic's license](https://github.com/EpicGames/MetaHuman-DNA-Calibration/blob/main/LICENSE).
 
 TBH, I have no idea about correctly licensing. 
+
 # Workflow
 - Acquire metahuman source files (Uassets and dna) through Metahuman Creator and Quxiel Bridge in Unreal Engine 5
 - Export head mesh and body mesh with morph targets and armature (Not concerning LODs)
@@ -27,7 +31,8 @@ TBH, I have no idea about correctly licensing.
 	Or you can import the head mesh right back to Blender, transfer those data mentioned above, use this addon (not exist yet) to edit corresponding dna, and finally reimport them into UE5.
 	Just like what was in my mind before this workflow is writen.
 
-- Anyway, it still can be good if you'd like to refine expression with Blender. 
+- Anyway, it still can be good if you'd like to refine expression with Blender.
+
 # Usage
 - Download [DNACalib](https://github.com/EpicGames/MetaHuman-DNA-Calibration) release
 - Grab all files but mlls under lib/maya2023/windows/ and drag them to the folder of this addon
