@@ -1,4 +1,4 @@
-# metahuman-DNA-Blender-interface
+# metahuman-DNA-Blender-tools
 Intention is to make reading, editing and writing dna files of metahuman possible in Blender.
 # License
 Since this is a Blender addon, it has to go with with [GPL licence](LICENSE). 
