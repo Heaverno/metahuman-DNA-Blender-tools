@@ -20,7 +20,7 @@ bl_info = {
     "name": "Metahuman DNA Tools", 
     "author": "Heaverno",
     "version": (0, 0, 1), 
-    "blender": (3, 6, 2),
+    "blender": (3, 0, 0),
     "category": "Mesh", 
     "location": "Viewport > Right Panel",
     "description": "Toolset for editing metahuman dna file", 
@@ -29,23 +29,9 @@ bl_info = {
 
 import bpy
 from . import DPanels
+from . import DUtils
 
-class PrintInConsole(bpy.types.Operator):
-    """A init function test"""      # Use this as a tooltip for menu items and buttons.
-    bl_idname = "interface.print_test"        # Unique identifier for buttons and menu items to reference.
-    bl_label = "Test print in console"         # Display name in the interface.
-    #bl_options = {'REGISTER', 'UNDO'}  # Enable undo for the operator.
-
-    def execute(self, context):        # execute() is called when running the operator.
-
-        # The original script
-        print("This is a test print from __init__, qwq")
-        return {'FINISHED'}            # Lets Blender know the operator finished successfully.
-
-
-modules = [
-    DPanels
-]
+modules = [DPanels, DUtils]
 
 def register():
     for module in modules:

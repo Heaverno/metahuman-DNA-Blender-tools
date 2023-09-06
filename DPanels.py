@@ -17,23 +17,7 @@
 # ##### END GPL LICENSE BLOCK #####
 
 import bpy
-
-class TestFuncInDPanels(bpy.types.Operator):
-    """Create a text in the scene, to test code in DPanels"""      
-    bl_idname = "interface.test_dpanels"        # Unique identifier for buttons and menu items to reference.
-    bl_label = "Put in a text"         # Display name in the interface.
-    bl_options = {'REGISTER', 'UNDO'}  # Enable undo for the operator.
-
-    def execute(self, context):        # execute() is called when running the operator.
-
-        # The original script
-        font_curve = bpy.data.curves.new(type="FONT", name="numberPlate")
-        font_curve.body = "DPanels"
-        obj = bpy.data.objects.new(name="Font Object", object_data=font_curve)
-        obj.location = (0, 0, 0)
-        bpy.context.scene.collection.objects.link(obj)
-
-        return {'FINISHED'}            # Lets Blender know the operator finished successfully.
+from . import DUtils
 
 class DNA_Import_Panel(bpy.types.Panel):
     bl_label = "Import DNA"
@@ -43,11 +27,10 @@ class DNA_Import_Panel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
-        col = layout.column(align=True)
+        col = layout.column(align = True)
+        col.operator("object.test_dpanels")
         col.separator()
-        col.operator("interface.test_dpanels")
-        col.separator()
-        col.operator("interface.test_dpanels")
+        col.operator("io.import_dna")
         col.separator()
         row = col.row(align=True)
         row.operator("ed.undo", icon='LOOP_BACK')
@@ -59,7 +42,6 @@ class DNA_Import_Panel(bpy.types.Panel):
 classes = [DNA_Import_Panel]
 
 def register():
-
     for cls in classes:
         bpy.utils.register_class(cls)
 
