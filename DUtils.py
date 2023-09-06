@@ -19,8 +19,8 @@
 import bpy
 import os
 from bpy_extras.io_utils import ImportHelper
-from dna_demo import load_dna
-import dnacalib_demo
+#from dna_demo import load_dna
+#import dnacalib_demo
 
 class TestFunc(bpy.types.Operator):
     bl_idname = "object.test_dpanels" 
@@ -50,14 +50,15 @@ class ImportDNA(bpy.types.Operator, ImportHelper):
     def execute(self, context):
         filedir = self.properties.filepath
 
-        with open(filedir, 'rb') as fid:
-            print(fid)
-            reader = load_dna(fid)
+        with open(filedir, 'rb') as freader:
+            print(freader)
+            #dnareader = load_dna(freader)
 
         root_path = os.path.dirname(os.path.realpath(__file__))
         print(root_path)
+        bpy.ops.wm.console_toggle()
         #load_bvh(res_db, root_path, gender)
-
+        
         return{'FINISHED'}
 
 classes = [TestFunc, ImportDNA]

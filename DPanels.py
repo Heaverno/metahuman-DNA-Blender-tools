@@ -28,13 +28,13 @@ class DNA_Import_Panel(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
         col = layout.column(align = True)
-        col.operator("object.test_dpanels")
+        col.operator("object.test_dpanels", text = "Create test text", icon = "FILE_TEXT")
         col.separator()
         col.operator("io.import_dna")
         col.separator()
         row = col.row(align=True)
-        row.operator("ed.undo", icon='LOOP_BACK')
-        row.operator("ed.redo", icon='LOOP_FORWARDS')
+        row.operator("ed.undo", icon = "LOOP_BACK")
+        row.operator("ed.redo", icon = "LOOP_FORWARDS")
         col.separator()
         col.label(text="qwq")
 

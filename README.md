@@ -1,7 +1,7 @@
 # metahuman-DNA-Blender-tools
 Intention is to make reading, editing and writing dna files of metahuman possible in Blender.
 
-Please read me thoroughly.
+Please read me thoroughly. This is a WIP. 
 
 # License
 Since this is a Blender addon, it has to go with with [GPL licence](LICENSE). 
@@ -20,10 +20,10 @@ TBH, I have no idea about correctly licensing.
 	- weights, as facial expression is still driven by skeletal mesh after all
 - Mean while, more important datas are stored inside dna file, such as how CTRL_expression manage bones and curves
 - You can copy the head mesh in Blender for data transfer after editing the head mesh
-- Now you have an editable head mesh! You can use Zb or Wrap4D or any method you'd like to, just make sure it's topology won't change
+- Now you have an editable head mesh! You can use Zbrush or Wrap4D or any method you'd like to, just make sure it's topology won't change
 - Here is where things split up.
 
-	After Unreal Engine 5.2, the metahuman identity (standard workflow taught in Unreal documentation) can accept mesh of same topology bypassing identity solve.
+	After Unreal Engine 5.2, the [metahuman identity](https://dev.epicgames.com/documentation/en-US/metahuman/mesh-to-metahuman-quick-start-in-unreal-engine) can accept mesh of same topology bypassing identity solve.
 	This means you can throw in your just edited head mesh and let Metahuman Creator generate everything for you. Then you can take care of groom and textures and so on. 
 	And BAM! everything is done. Then why does this repo exists? 
 	I initally wrote this workflow to help me teasing out what the addon should be capable of, but here now it's raising a philosophical problem to me. 
