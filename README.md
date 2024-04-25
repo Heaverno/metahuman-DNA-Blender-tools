@@ -2,6 +2,7 @@
 Intention is to make reading, editing and writing dna files of metahuman possible in Blender.
 
 Please read me thoroughly. This is a WIP. 
+New metahuman after 5.2 release provides a more simple way to edit it's mesh, the dis WIP progress of the project is permnantly delayed :(
 
 # License
 Since this is a Blender addon, it has to go with with [GPL licence](LICENSE). 
